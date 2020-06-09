@@ -13,14 +13,14 @@ public class JUnit {
     private Logger logger = LogManager.getLogger(JUnit.class);
 
     @Before
-    public void setUp() {
+    public void chromeUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         logger.info("Драйвер поднят");
     }
 
     @Test
-    public void testIn() {
+    public void testStart() {
         driver.get("http://otus.ru");
         logger.info("Открыта страница отус");
     }
